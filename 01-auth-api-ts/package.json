@@ -1,0 +1,16 @@
+{
+  "name": "auth-api-crypto-target-ts",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "jose": "^6.0.10"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.5",
+    "typescript": "^5.7.2"
+  }
+}

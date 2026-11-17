@@ -1,0 +1,14 @@
+{
+  "name": "tls12-security-message-site",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/server.js"
+  },
+  "dependencies": {
+    "@types/node": "22.10.5",
+    "typescript": "5.7.2"
+  }
+}
+

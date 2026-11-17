@@ -1,0 +1,12 @@
+{
+  "language": "Python",
+  "dependencies": ["cryptography", "PyJWT"],
+  "assets": [
+    { "algorithm": "PBKDF2-HMAC-SHA256", "purpose": "password derivation", "source": "main.py" },
+    { "algorithm": "AES-256-GCM", "purpose": "message encryption", "source": "main.py" },
+    { "algorithm": "RSA-2048-PSS-SHA256", "purpose": "digital signature", "source": "main.py" },
+    { "algorithm": "ECDSA P-256 / SHA-256", "purpose": "digital signature", "source": "main.py" },
+    { "algorithm": "Ed25519", "purpose": "digital signature", "source": "main.py" },
+    { "algorithm": "JWT HS256 / RS256", "purpose": "token signing", "source": "main.py" }
+  ]
+}

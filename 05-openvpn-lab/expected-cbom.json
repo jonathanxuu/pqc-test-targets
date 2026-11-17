@@ -1,0 +1,23 @@
+{
+  "protocol": "OpenVPN",
+  "assets": [
+    {
+      "file": "configs/openvpn-modern.conf",
+      "algorithm": "AES-256-GCM",
+      "purpose": "VPN data encryption",
+      "risk": "recommended AEAD"
+    },
+    {
+      "file": "configs/openvpn-modern.conf",
+      "algorithm": "SHA-256",
+      "purpose": "authentication/integrity",
+      "risk": "modern"
+    },
+    {
+      "file": "configs/openvpn-modern.conf",
+      "algorithm": "TLS 1.3",
+      "purpose": "control-channel security",
+      "risk": "modern protocol"
+    }
+  ]
+}

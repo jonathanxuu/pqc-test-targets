@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(crypto_tool C)
+find_package(OpenSSL 3 REQUIRED)
+add_executable(crypto-tool main.c)
+target_link_libraries(crypto-tool PRIVATE OpenSSL::Crypto)
+target_compile_features(crypto-tool PRIVATE c_std_11)

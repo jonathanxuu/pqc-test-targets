@@ -1,0 +1,12 @@
+{
+  "language": "Go",
+  "assets": [
+    { "algorithm": "Argon2id", "purpose": "password derivation", "source": "main.go" },
+    { "algorithm": "AES-256-GCM", "purpose": "file encryption", "source": "main.go" },
+    { "algorithm": "ChaCha20-Poly1305", "purpose": "alternative encryption", "source": "main.go" },
+    { "algorithm": "RSA-OAEP-SHA256", "purpose": "key encapsulation", "source": "main.go" },
+    { "algorithm": "Ed25519", "purpose": "file signing", "source": "main.go" },
+    { "algorithm": "SHA-256", "purpose": "file digest", "source": "main.go" }
+  ],
+  "dependencies": ["crypto/aes", "crypto/rsa", "crypto/ed25519", "golang.org/x/crypto"]
+}

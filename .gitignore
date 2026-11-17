@@ -1,0 +1,41 @@
+# macOS
+.DS_Store
+
+# JavaScript / TypeScript
+node_modules/
+dist/
+.npm/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Go
+*.test
+
+# Rust
+target/
+
+# Java / Maven
+*.class
+
+# C build outputs
+*.o
+*.a
+*.so
+*.dylib
+04-binary-file-signer-c/file-signer
+04-binary-file-signer-c/file-signer-debug
+04-binary-file-signer-c/file-signer-stripped
+
+# Local crypto material and generated signatures
+*.pem
+*.key
+*.sig
+*.crt
+*.csr
+
+# Runtime logs
+*.log

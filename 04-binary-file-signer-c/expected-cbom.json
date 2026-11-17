@@ -1,0 +1,10 @@
+{
+  "artifact": "file-signer-stripped",
+  "language": "C",
+  "binaryAssets": [
+    { "algorithm": "RSA-2048", "purpose": "signing key", "confidence": "high" },
+    { "algorithm": "RSA-PSS", "purpose": "signature padding", "confidence": "high" },
+    { "algorithm": "SHA-256", "purpose": "message digest", "confidence": "high" },
+    { "library": "OpenSSL libcrypto", "purpose": "cryptographic implementation", "confidence": "high" }
+  ]
+}

@@ -1,0 +1,46 @@
+services:
+  openvpn-server:
+    build: ./server
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    volumes:
+      - pki:/shared/pki
+    networks:
+      vpn-control:
+      vpn-internal:
+        ipv4_address: 10.9.0.2
+    ports:
+      - "1194:1194/udp"
+
+  openvpn-client:
+    build: ./client
+    depends_on:
+      - openvpn-server
+    cap_add:
+      - NET_ADMIN
+    devices:
+      - /dev/net/tun:/dev/net/tun
+    volumes:
+      - pki:/shared/pki:ro
+    networks:
+      - vpn-control
+    command: ["/usr/local/bin/client-entrypoint.sh"]
+
+  internal-service:
+    build: ./internal-service
+    networks:
+      vpn-internal:
+        ipv4_address: 10.9.0.100
+
+networks:
+  vpn-control:
+
+  vpn-internal:
+    ipam:
+      config:
+        - subnet: 10.9.0.0/24
+
+volumes:
+  pki:

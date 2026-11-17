@@ -1,0 +1,12 @@
+services:
+  app:
+    build:
+      context: .
+      dockerfile: app.Dockerfile
+
+  nginx:
+    build: ./nginx
+    depends_on:
+      - app
+    ports:
+      - "9443:443"

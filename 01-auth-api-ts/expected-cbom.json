@@ -1,0 +1,12 @@
+{
+  "language": "TypeScript",
+  "assets": [
+    { "algorithm": "PBKDF2-HMAC-SHA256", "purpose": "password derivation", "source": "src/server.ts" },
+    { "algorithm": "AES-256-GCM", "purpose": "refresh-token protection", "source": "src/server.ts" },
+    { "algorithm": "HMAC-SHA256", "purpose": "integrity/MAC", "source": "src/server.ts" },
+    { "algorithm": "RSA-2048-PKCS1-SHA256", "purpose": "JWT signing key", "source": "src/server.ts" },
+    { "algorithm": "RSA-2048-PSS-SHA256", "purpose": "JWT signing key", "source": "src/server.ts" },
+    { "algorithm": "ECDSA P-256 / ES256", "purpose": "JWT signing key", "source": "src/server.ts" }
+  ],
+  "dependencies": ["jose", "node:crypto"]
+}

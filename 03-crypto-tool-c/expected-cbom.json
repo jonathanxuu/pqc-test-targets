@@ -1,0 +1,13 @@
+{
+  "language": "C",
+  "assets": [
+    { "algorithm": "AES-256-GCM", "purpose": "AEAD encryption", "source": "main.c", "api": "EVP_aes_256_gcm" },
+    { "algorithm": "RSA-PSS-SHA256", "purpose": "signature", "source": "main.c", "api": "EVP_PKEY_CTX_set_rsa_padding" },
+    { "algorithm": "RSA-OAEP-SHA256", "purpose": "key encapsulation", "source": "main.c", "api": "RSA_PKCS1_OAEP_PADDING" },
+    { "algorithm": "ECDSA P-256", "purpose": "signature", "source": "main.c", "api": "NID_X9_62_prime256v1" },
+    { "algorithm": "Ed25519", "purpose": "signature", "source": "main.c", "api": "EVP_PKEY_ED25519" },
+    { "algorithm": "SHA-1", "purpose": "legacy digest", "source": "main.c", "api": "SHA1" },
+    { "algorithm": "SHA-256", "purpose": "digest", "source": "main.c", "api": "SHA256" }
+  ],
+  "dependencies": ["OpenSSL libcrypto"]
+}

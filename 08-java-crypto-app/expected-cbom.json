@@ -1,0 +1,12 @@
+{
+  "language": "Java",
+  "dependencies": ["JCA/JCE", "Bouncy Castle bcprov-jdk18on"],
+  "assets": [
+    { "algorithm": "PBKDF2WithHmacSHA256", "purpose": "password derivation", "source": "CryptoInventory.java" },
+    { "algorithm": "AES-256-GCM", "purpose": "message encryption", "source": "CryptoInventory.java" },
+    { "algorithm": "RSA-PSS-SHA256", "purpose": "digital signature", "source": "CryptoInventory.java" },
+    { "algorithm": "ECDSA P-256 / SHA-256", "purpose": "digital signature", "source": "CryptoInventory.java" },
+    { "algorithm": "Ed25519", "purpose": "digital signature", "source": "CryptoInventory.java" },
+    { "algorithm": "HmacSHA256", "purpose": "message authentication", "source": "CryptoInventory.java" }
+  ]
+}

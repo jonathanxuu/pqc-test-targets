@@ -1,0 +1,11 @@
+{
+  "language": "Rust",
+  "dependencies": ["aes-gcm", "argon2", "rsa", "ed25519-dalek", "sha2"],
+  "assets": [
+    { "algorithm": "Argon2id", "purpose": "password derivation", "source": "src/main.rs" },
+    { "algorithm": "AES-256-GCM", "purpose": "message encryption", "source": "src/main.rs" },
+    { "algorithm": "RSA-2048-PSS-SHA256", "purpose": "digital signature", "source": "src/main.rs" },
+    { "algorithm": "Ed25519", "purpose": "digital signature", "source": "src/main.rs" },
+    { "algorithm": "SHA-256", "purpose": "message digest", "source": "src/main.rs" }
+  ]
+}
