@@ -28,6 +28,8 @@ make stripped
 - `file-signer-debug`：包含调试符号，方便确认源码级逆向能力。
 - `file-signer-stripped`：去除符号表，更接近真实发布二进制。
 
+仓库同时保留了这两个 macOS Apple Silicon（arm64）二进制文件，方便同事直接进行二进制静态检测。其他平台需要根据 `main.c` 重新编译。
+
 ## 使用
 
 ```bash

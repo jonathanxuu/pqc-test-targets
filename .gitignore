@@ -29,6 +29,8 @@ target/
 04-binary-file-signer-c/file-signer
 04-binary-file-signer-c/file-signer-debug
 04-binary-file-signer-c/file-signer-stripped
+!04-binary-file-signer-c/file-signer-debug
+!04-binary-file-signer-c/file-signer-stripped
 
 # Local crypto material and generated signatures
 *.pem
