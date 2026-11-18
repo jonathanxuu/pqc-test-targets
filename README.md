@@ -12,6 +12,7 @@
 | `06-python-crypto-app` | Python | cryptography / PyJWT 应用 |
 | `07-rust-crypto-app` | Rust | RustCrypto 应用 |
 | `08-java-crypto-app` | Java | JCA/JCE / Bouncy Castle 应用 |
+| `09-cert-key-corpus` | 多格式密码资产 | 证书、私钥、密钥库和 SSH 密钥样本 |
 
 这些项目用于测试平台对源代码、依赖库、配置文件、二进制文件以及运行中网络服务的密码算法识别能力。
 
@@ -57,6 +58,10 @@
 
 使用 Java JCA/JCE 以及 Bouncy Castle 实现 PBKDF2、AES-GCM、HMAC、RSA-PSS、ECDSA、Ed25519 和 SHA-256，用于测试 Java 标准密码接口与第三方 Provider 识别。
 
+### `09-cert-key-corpus`
+
+提供 RSA、EC、Ed25519、ML-DSA-44 证书，完整证书链，加密/未加密 PEM 与 DER 私钥，PKCS#12、JKS 和 SSH 密钥，并包含过期证书及伪装 PEM 干扰项，用于测试密码资产文件发现、格式解析、有效期判断和不支持格式报告。
+
 ## 测试范围总结
 
 ```text
@@ -65,4 +70,5 @@
 二进制扫描：C stripped 签名程序
 运行时检测：TLS 1.2、TLS 1.3、OpenVPN 隧道
 后量子测试：X25519MLKEM768
+证书与密钥资产发现：X.509、PEM、DER、PKCS#12、JKS、SSH、ML-DSA-44
 ```

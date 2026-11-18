@@ -1,0 +1,36 @@
+{
+  "fixture": "09-cert-key-corpus",
+  "generatedAt": "2026-11-18",
+  "nonExpiredValidityDays": 365,
+  "testPassphrase": "test-passphrase",
+  "assets": [
+    { "path": "certificates/rsa-1024.crt", "type": "x509-certificate", "algorithm": "RSA", "keySize": 1024, "expired": false },
+    { "path": "certificates/rsa-2048.crt", "type": "x509-certificate", "algorithm": "RSA", "keySize": 2048, "expired": false },
+    { "path": "certificates/rsa-4096.crt", "type": "x509-certificate", "algorithm": "RSA", "keySize": 4096, "expired": false },
+    { "path": "certificates/ec-p256.crt", "type": "x509-certificate", "algorithm": "EC", "curve": "P-256", "expired": false },
+    { "path": "certificates/ec-p384.crt", "type": "x509-certificate", "algorithm": "EC", "curve": "P-384", "expired": false },
+    { "path": "certificates/ec-p521.crt", "type": "x509-certificate", "algorithm": "EC", "curve": "P-521", "expired": false },
+    { "path": "certificates/ed25519.crt", "type": "x509-certificate", "algorithm": "Ed25519", "expired": false },
+    { "path": "certificates/pq-ml-dsa-44.crt", "type": "x509-certificate", "algorithm": "ML-DSA-44", "quantumSafe": true, "expired": false },
+    { "path": "certificates/expired.crt", "type": "x509-certificate", "algorithm": "RSA", "keySize": 2048, "expired": true },
+    { "path": "chains/root-ca.crt", "type": "x509-certificate", "role": "root-ca", "algorithm": "RSA", "keySize": 4096, "expired": false },
+    { "path": "chains/intermediate-ca.crt", "type": "x509-certificate", "role": "intermediate-ca", "algorithm": "RSA", "keySize": 2048, "expired": false },
+    { "path": "chains/leaf-server.crt", "type": "x509-certificate", "role": "leaf", "algorithm": "RSA", "keySize": 2048, "expired": false },
+    { "path": "private-keys/rsa-2048-plain.pem", "type": "private-key", "algorithm": "RSA", "keySize": 2048, "format": "PEM", "encrypted": false },
+    { "path": "private-keys/rsa-2048-encrypted.pem", "type": "private-key", "algorithm": "RSA", "keySize": 2048, "format": "PEM", "encrypted": true },
+    { "path": "private-keys/rsa-2048-plain.der", "type": "private-key", "algorithm": "RSA", "keySize": 2048, "format": "DER", "encrypted": false },
+    { "path": "private-keys/rsa-2048-encrypted.der", "type": "private-key", "algorithm": "RSA", "keySize": 2048, "format": "DER", "encrypted": true },
+    { "path": "keystores/sample.p12", "type": "PKCS#12", "encrypted": true, "expectedSupport": true },
+    { "path": "keystores/sample.jks", "type": "JKS", "encrypted": true, "expectedSupport": false },
+    { "path": "ssh/ssh_host_rsa_key", "type": "SSH-private-key", "algorithm": "RSA", "keySize": 2048, "role": "host", "encrypted": true },
+    { "path": "ssh/ssh_host_ed25519_key", "type": "SSH-private-key", "algorithm": "Ed25519", "role": "host", "encrypted": false },
+    { "path": "ssh/user_ed25519", "type": "SSH-private-key", "algorithm": "Ed25519", "role": "user", "encrypted": true },
+    { "path": "ssh/user_rsa", "type": "SSH-private-key", "algorithm": "RSA", "keySize": 2048, "role": "user", "encrypted": false },
+    { "path": "noise/fake-certificate.pem", "type": "unknown-or-invalid", "expectedCertificate": false }
+  ],
+  "chain": [
+    "chains/root-ca.crt",
+    "chains/intermediate-ca.crt",
+    "chains/leaf-server.crt"
+  ]
+}

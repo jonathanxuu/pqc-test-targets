@@ -41,3 +41,8 @@ target/
 
 # Runtime logs
 *.log
+
+# 09-cert-key-corpus intentionally contains committed test certificates,
+# private keys, keystores, and SSH keys. They are synthetic test fixtures.
+!09-cert-key-corpus/
+!09-cert-key-corpus/**
